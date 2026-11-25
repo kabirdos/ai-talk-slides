@@ -71,3 +71,15 @@ export default defineConfig([
   },
 ])
 ```
+
+## Explorable world (`/world.html`)
+
+A procedural, walkable 3D world generated from the same slide data (`src/data/slides.ts`).
+Every metro **line** becomes a coloured road and every **stop** becomes a plaza with an
+animated diorama that acts out the slide while a story card reveals its bullets beat by beat.
+
+- Run `npm run dev` and open http://localhost:5173/world.html
+- Code lives in `src/world/` (Three.js, no React). Each stop's animation is in `src/world/vignettes.ts`.
+- Downscaled textures for the world are in `public/world/img/`.
+- `?seed=<anything>` generates a different world (terrain, trees, road wiggles); the metro topology stays the same.
+- Controls: WASD/arrows to walk, Shift to run, drag to look, F follows the current line to its next stop, M opens the map (click a stop to travel), R replays a story. Touch devices get a joystick.
