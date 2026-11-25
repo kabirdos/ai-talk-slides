@@ -223,3 +223,10 @@ export const METRO_LAYOUT = {
   lineThickness: 16, // thicker metro lines like reference
   verticalOffset: 350, // expanded for slide images + vertical spacing
 } as const;
+
+// Data for the level badge node (LevelNode)
+export interface LevelNodeData extends Record<string, unknown> {
+  level: number;
+  slideId: string;
+  track: Track;
+}
